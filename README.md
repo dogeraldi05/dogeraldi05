@@ -53,6 +53,7 @@ A small collection of practical studies and utilities around:
 ✅ Remote roles in **Data Analyst** / **Applied Data Scientist**  
 ✅ Strong interest in **energy / utilities / climate / industrial analytics**  
 ✅ Teams that value domain knowledge + practical analytics
+✅ Develop ideas using **wireless connection**
 
 ---
 
