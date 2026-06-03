@@ -1,7 +1,7 @@
 
 # Hi, I'm Douglas 👋
 
-🎯 **Applied Data Scientist / Data Analyst (Remote)**  
+🎯 **Applied Data Scientist / Data Analyst **  
 ⚡ Energy & Power Systems domain background | 🐍 Python | 🔥 PySpark | 📊 Data Analysis | 🧱 ETL   
 
 I'm building a portfolio focused on **data-driven problem solving in the energy sector**, combining analytics + machine learning + scalable processing with **PySpark**.  
