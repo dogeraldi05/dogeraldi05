@@ -1,81 +1,41 @@
+# Douglas Geraldi
 
-# Hi, I'm Douglas 👋
+Applied data scientist and data analyst with a power systems and energy background. I have 15 years in the energy sector, from utility metering and system integration at CPFL to delivering 100+ solar projects. I build Python models that turn operational data into decisions.
 
-🎯 **Applied Data Scientist / Data Analyst **  
-⚡ Energy & Power Systems domain background | 🐍 Python | 🔥 PySpark | 📊 Data Analysis | 🧱 ETL   
+Based in Brazil (UTC-3). Open to remote Data Analyst and Applied Data Scientist roles worldwide, with a focus on energy, utilities, climate, and industrial analytics.
 
-I'm building a portfolio focused on **data-driven problem solving in the energy sector**, combining analytics + machine learning + scalable processing with **PySpark**.  
-I’m currently interested in **remote opportunities (USA & Canada)** in **Data Science / Data Analytics**.
+## Featured project
 
----
-## 🔥 Featured Projects
+### [PV-anomaly-detection](https://github.com/dogeraldi05/PV-anomaly-detection)
 
-### ⚡ US Power Outages Analysis with PySpark (2023)
-A PySpark + ML project using a public outage dataset (77k+ records) to:
-- explore outage patterns
-- classify outage event types with **Random Forest**
-- predict outage duration with **Linear Regression**
-- visualize results in a notebook workflow
+Which solar inverters lost energy, why, and how much?
 
-➡️ Repo: **OutagesUSA_1**  
-🔗 https://github.com/dogeraldi05/OutagesUSA_1  
-[2](https://github.com/dogeraldi05/OutagesUSA_1)
+The method comes from my professional work on PV plant performance (2024) and is rebuilt here on public and synthetic data. Each inverter's output is compared with a weather baseline learned from its own history (robust regression on irradiance and module temperature). The project separates plant-level events, such as a grid trip, from individual inverter faults, and raises alarms with a probable cause and the energy lost in kWh.
 
----
-### 🧰 ETL Toolkit (experiments)
-A small collection of practical studies and utilities around:
-- decorators
-- retry strategies
-- time measurement
-- ETL-related patterns
+- Four detection rules: zero output in daylight, missing data, new fault, and chronic underperformance.
+- A step report that dates the day a lasting drop started, such as a string opening.
+- 17 automated tests with pytest.
+- Validated on a synthetic plant with injected faults and on two public plants (22 inverters, 34 days).
+- Stated limits: daily alarms are reliable from about 10% loss, and the step report catches about 5%. The real plants have no labeled faults.
 
-➡️ Repo: **etl-toolkit-test01**  
-🔗 https://github.com/dogeraldi05/etl-toolkit-test01  
-[3](https://github.com/dogeraldi05/etl-toolkit-test01)
+Stack: Python, pandas, scikit-learn, matplotlib, pytest.
 
----
-## 📚 Learning / Practice Repos
+## Other projects
 
-- **penguins_1** — first explorations using the Penguins dataset (EDA practice). [1](https://github.com/dogeraldi05)  
-- **repo_1_crops** — notebooks and early experiments (Jupyter). [1](https://github.com/dogeraldi05)  
-- **read** — learning repository based on Read the Docs tutorial template. [4](https://github.com/dogeraldi05/read)  
-- **github-slideshow** — GitHub Learning Lab training repository. [5](https://github.com/dogeraldi05/github-slideshow)  
+- [OutagesUSA_1](https://github.com/dogeraldi05/OutagesUSA_1): PySpark analysis of 77,000+ US power outage records (2023). Random Forest to classify outage event types and Linear Regression to predict outage duration.
+- [etl-toolkit-test01](https://github.com/dogeraldi05/etl-toolkit-test01): small ETL utilities and studies on retry strategies, timing, and decorators.
 
----
-## 🧩 Core Skills (growing focus)
-- **Python**, **PySpark**, notebooks (Colab/Jupyter)
-- Data analysis & visualization (EDA, metrics, charts)
-- Basic ML workflows (classification/regression with Spark MLlib)
-- ETL patterns and reliability practices (retry, timing, modular code)
+## Skills
 
----
-## 🎯 What I’m looking for
-✅ Remote roles in **Data Analyst** / **Applied Data Scientist**  
-✅ Strong interest in **energy / utilities / climate / industrial analytics**  
-✅ Teams that value domain knowledge + practical analytics
-✅ Develop ideas using **wireless connection**
+| Area | Tools |
+|---|---|
+| Programming and data | Python (pandas, NumPy, scikit-learn, matplotlib), SQL, PySpark, Jupyter, Git, AWS EC2 |
+| Analytics and BI | Power BI, Tableau, Excel (Power Query), dashboards, KPI design |
+| Methods | anomaly detection, predictive modeling, forecasting, exploratory data analysis, data quality |
+| Data systems | master data management (MDM), systems integration testing (SAP, MDM, AMI) |
+| Domain | photovoltaic performance, power systems, distributed generation, meter data |
 
----
+## Background
 
-## 📫 Let’s connect
-- LinkedIn: https://www.linkedin.com/in/douglas-geraldi/
-- GitHub: https://github.com/dogeraldi05
-``
-
-
-<!--
-**dogeraldi05/dogeraldi05** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-
-
+- CPFL Energia: worked with the IT team on the MDM rollout for 25,000+ commercial and industrial customers, validating the integrations between SAP modules, the eMeter MDM, Itron ZFA, and Silver Spring UIQ, and running end-to-end tests from meter data collection to the start of billing.
+- Solstício Energia: led project delivery and new business, with 100+ solar projects and 50+ MWp commissioned. Built an account scoring model (2024) that doubled qualified B2B
