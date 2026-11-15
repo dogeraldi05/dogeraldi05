@@ -1,10 +1,24 @@
 # Douglas Geraldi
 
-Applied data scientist and data analyst with a power systems and energy background. I have 15 years in the energy sector, from utility metering and data management at CPFL to delivering 100+ solar projects. I build Python models that turn operational data into decisions.
+Applied data scientist and data analyst with a power systems and energy background. I have 15 years in the energy sector, from utility metering and data management at CPFL to joining a solar company as an early partner and scaling it through 100+ delivered projects. I build Python models that turn operational data into decisions, and I have run the business those decisions affected.
 
 Based in Brazil (UTC-3). Open to remote Data Analyst and Applied Data Scientist roles worldwide, with a focus on energy, utilities, climate, and industrial analytics.
 
-## Featured project
+## Featured projects
+
+### [ons_forecast](https://github.com/dogeraldi05/ons_forecast)
+
+Does a machine learning model actually beat a well-chosen naive baseline on daily peak electricity demand?
+
+Forecasting daily peak demand for Brazil's National Interconnected System on ONS open data. The data layer is SQL on DuckDB: lags, rolling means and calendar features as window functions, every one of them at least 7 days old so nothing leaks at a 7-day horizon.
+
+- Walk-forward cross-validation over five folds, plus a holdout touched once.
+- +8.9% skill over the seasonal naive across subsystems, +29.2% on Southeast/Midwest.
+- The same pipeline runs on CSV and Parquet, with the trade-off measured rather than asserted: 358 KB vs 138 KB on disk, ~1,400 ms vs ~30 ms ingestion, typed on read or not.
+- A 2027 long-horizon forecast using a linear trend per subsystem times an XGBoost seasonal ratio, backtested at +24.4% over the annual naive.
+- Stated limits: no weather data, three years of history, point forecasts only, and a linear trend fitted on under three years.
+
+Stack: DuckDB, SQL, Python, pandas, XGBoost, matplotlib.
 
 ### [PV-anomaly-detection](https://github.com/dogeraldi05/PV-anomaly-detection)
 
@@ -41,18 +55,24 @@ Stack: Python, sentence-transformers, NumPy.
 
 | Area | Tools |
 |---|---|
-| Programming and data | Python (pandas, NumPy, scikit-learn, matplotlib), SQL, PySpark, Jupyter, Git |
+| Programming and data | Python (pandas, NumPy, scikit-learn, XGBoost, matplotlib), SQL (window functions, CTEs), DuckDB, PySpark, Jupyter, Git |
 | LLM applications | RAG (hybrid search, reranking, citations, abstention), sentence-transformers, LangChain |
 | Analytics and BI | Power BI, Tableau, Excel (Power Query), dashboards, KPI design |
-| Methods | anomaly detection, predictive modeling, forecasting, exploratory data analysis, data quality |
-| Domain | photovoltaic performance, power systems, distributed generation, meter data management |
+| Methods | time series forecasting, walk-forward validation, baseline benchmarking, anomaly detection, predictive modeling, exploratory data analysis, data quality |
+| Business | P&L ownership, business development, pricing, contract negotiation, commercial forecasting, stakeholder management |
+| Domain | photovoltaic performance, power systems, electricity demand, distributed generation, meter data management |
 
 ## Background
 
-- Metering and data management at CPFL Energia, including the MDM implementation for 25,000+ commercial and industrial customers.
-- Led project delivery and new business at Solstício Energia: 100+ solar projects, 50+ MWp commissioned. Built an account scoring model that doubled qualified B2B leads in 3 months.
-- Electrical Engineering (B.Sc. and M.Sc.) at UNICAMP and an MBA in Executive Strategy at FGV. DataCamp Associate Data Scientist.
-- Portuguese (native) and English (full professional).
+**Entrepreneur and business developer.** Partner at Solstício Energia, where I came in early to lead the electrical engineering side and stayed 10 years running the company from both sides of the table: P&L ownership, business development, pricing and contract negotiation, and a B2B commercial unit I coordinated from 2018 to 2024 with two direct reports. 100+ solar projects delivered, 50+ MWp commissioned, USD 2.5M+ in new business closed.
+
+That work is where my analytics habit started. An account scoring model doubled qualified B2B leads in three months. A KPI-driven contract tracking framework over 10+ concurrent contracts cut client disputes by half. Both were built because the business needed them, not as exercises.
+
+**Utility engineering.** Metering and data management at CPFL Energia, including the MDM implementation for 25,000+ commercial and industrial customers, and the statistical checks that kept that measurement data trustworthy.
+
+**Education.** Electrical Engineering (B.Sc. and M.Sc.) at UNICAMP. MBA in Strategic Business Management at Fundação Getulio Vargas (FGV), one of Brazil's leading business schools. DataCamp Associate Data Scientist.
+
+**Languages.** Portuguese (native) and English (full professional).
 
 ## Contact
 
