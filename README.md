@@ -6,7 +6,7 @@ Based in Brazil (UTC-3). Open to remote Data Analyst and Applied Data Scientist 
 
 ## Featured projects
 
-### [ons_forecast](https://github.com/dogeraldi05/ons_forecast)
+### [ONS_forecast](https://github.com/dogeraldi05/ons_forecast)
 
 Does a machine learning model actually beat a well-chosen naive baseline on daily peak electricity demand?
 
