@@ -46,6 +46,20 @@ A minimal retrieval-augmented generation pipeline in about 150 lines of Python, 
 
 Stack: Python, sentence-transformers, NumPy.
 
+### [beyond-automl](https://github.com/dogeraldi05/beyond-automl)
+
+Does the model with the best AUC also make the best business decision?
+
+An LLM reads only an aggregated profile of a telecom dataset (IBM Telco Churn, 7,043 customers) and proposes business problems with targets and value assumptions. Code guardrails validate each suggestion, 20 models are trained (5 problems × 4 algorithms), and the winner is chosen by profit over a no-model baseline, not by AUC.
+
+- Live run with DeepSeek via OpenRouter for US$ 0.003: churn is recommended (AUC 0.845, BRL 10.5M per cycle), ahead of the highest-AUC model (contract conversion, 0.935, BRL 4.6M).
+- Guardrails mapped to generative-AI shortcomings: invented columns, implausible values, biased targets, undeclared leakage and privacy (the LLM never sees customer rows).
+- A demo with a deliberately flawed LLM response shows them working: 3 of 8 problems rejected, and a model with AUC 1.000 flagged as a data leak and sent to human review.
+- Profit-optimal threshold per model, a recall gap check across sensitive groups, a Streamlit dashboard and pytest tests.
+- Stated limits: the ranking depends on the LLM's value assumptions, the threshold is tuned on the test set, and targets are propensity proxies.
+
+Stack: Python, pandas, scikit-learn, XGBoost, LightGBM, OpenRouter, Streamlit, pytest.
+
 ## Other projects
 
 - [OutagesUSA_1](https://github.com/dogeraldi05/OutagesUSA_1): PySpark analysis of 77,000+ US power outage records (2023). Random Forest to classify outage events and Linear Regression to predict outage duration.
@@ -56,7 +70,7 @@ Stack: Python, sentence-transformers, NumPy.
 | Area | Tools |
 |---|---|
 | Programming and data | Python (pandas, NumPy, scikit-learn, XGBoost, matplotlib), SQL (window functions, CTEs), DuckDB, PySpark, Jupyter, Git |
-| LLM applications | RAG (hybrid search, reranking, citations, abstention), sentence-transformers, LangChain |
+| LLM applications | RAG (hybrid search, reranking, citations, abstention), LLM output validation and guardrails, OpenRouter, sentence-transformers, LangChain |
 | Analytics and BI | Power BI, Tableau, Excel (Power Query), dashboards, KPI design |
 | Methods | time series forecasting, walk-forward validation, baseline benchmarking, anomaly detection, predictive modeling, exploratory data analysis, data quality |
 | Business | P&L ownership, business development, pricing, contract negotiation, commercial forecasting, stakeholder management |
